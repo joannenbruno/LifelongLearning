@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="store">
+  <head>
+    <title>AngularJS Gemstore Demo App</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+  </head>
+  <body ng-controller="StoreController as store">
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="product in store.products">
+        <h3>
+          {{product.name}}
+          <em class="pull-right">{{product.price | currency }}</em>
+        </h3>
+      </li>
+    </ul>
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
