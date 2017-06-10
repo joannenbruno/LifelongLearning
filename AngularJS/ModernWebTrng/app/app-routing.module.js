@@ -6,23 +6,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var forms_1 = require("@angular/forms");
-var http_1 = require("@angular/http");
-var app_routing_module_1 = require("./app-routing.module");
-var app_component_1 = require("./components/app/app.component");
+var router_1 = require("@angular/router");
 var person_search_component_1 = require("./components/person/person-search.component");
-var AppModule = (function () {
-    function AppModule() {
+var app_component_1 = require("./components/app/app.component");
+var routes = [
+    { path: "", redirectTo: '/search', pathMatch: "full" },
+    { path: "search", component: person_search_component_1.PersonSearchComponent }
+];
+var AppRoutingModule = (function () {
+    function AppRoutingModule() {
     }
-    return AppModule;
+    return AppRoutingModule;
 }());
-AppModule = __decorate([
+AppRoutingModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, app_routing_module_1.AppRoutingModule],
-        declarations: [app_component_1.AppComponent, person_search_component_1.PersonSearchComponent],
+        imports: [router_1.RouterModule.forRoot(routes)],
+        exports: [router_1.RouterModule],
         bootstrap: [app_component_1.AppComponent]
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], AppRoutingModule);
+exports.AppRoutingModule = AppRoutingModule;
+//# sourceMappingURL=app-routing.module.js.map

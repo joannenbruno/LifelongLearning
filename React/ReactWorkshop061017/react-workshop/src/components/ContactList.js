@@ -7,7 +7,7 @@ class ContactList extends Component {
     render() {
         return (
             <div>
-            <Contact name="Jeremy" email="jcantu521@gmail.com" phone="9562868386" address="11011 Domain Drive" ></Contact>
+            <Contact name="Piper Chapman" email="piperchapman@gmail.com" phone="1234567890" address="123 Orange St" ></Contact>
             </div>
         );
     }
